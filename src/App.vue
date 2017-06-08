@@ -1,13 +1,16 @@
 <template>
-  <div id="app">
+  <div>
     <img src="./assets/logo.png">
-    <router-view></router-view>
+    {{msg}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data(){
+    return{msg:'fuck'}
+  }
 }
 </script>
 
