@@ -1,17 +1,25 @@
 <template>
   <div>
-    <img src="./assets/logo.png">
-    {{msg}}
+    <div>
+      <h1>播放器</h1>
+      <Player/>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data(){
-    return{msg:'fuck'}
+  import Player from '@/components/player';
+
+
+
+  export default {
+    data(){
+      return{}
+    },
+    components:{
+      Player
+    }
   }
-}
 </script>
 
 <style>

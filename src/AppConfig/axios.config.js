@@ -1,9 +1,11 @@
 let cookie='appver=2.0.2';
 const config={
-    baseURL:'http://music.163.com/api',
+    baseURL:'/api',
     withCredentials:true,
     headers:{
-        cookie:cookie
+        'Content-Type': 'application/json',
+        cookie:cookie,
+        'X-Requested-With': 'XMLHttpRequest'
     },
     timeout:10000
 };

@@ -11,18 +11,22 @@
     export default {
         data() {
             return {
-                msg: 'Welcome to Your Vue.js App',
+                msg: '自定义播放器',
                 requestData:{
                     s:'七里香',
                     limit:10,
                     type:1,
                     offset:0
-                }
+                },
+                query:{url:null,
+                       data:{}}
             }
         },
         methods:{
             search(){
-                Rq_API.post(URLS.SEARCH_DETAILS,this.requestData);
+                this.query.url=URLS.SEARCH_DETAILS;
+                this.query.data=this.requestData;
+                Rq_API.post(this.query);
             }
         },
         mounted(){
