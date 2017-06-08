@@ -31,6 +31,7 @@ module.exports = {
     proxyTable: {
       '/api/*': {
         target: 'http://music.163.com',
+        hosts:'music.163.com',
         changeOrigin: true,
         secure: false
       }
